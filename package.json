@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justinberg97/project-2.git"
+    "url": "git+https://github.com/jacknel/digital-wine-cellar-heroku.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/justinberg97/project-2/issues"
+    "url": "https://github.com/jacknel/digital-wine-cellar-heroku/issues"
   },
-  "homepage": "https://github.com/justinberg97/project-2#readme",
+  "homepage": "https://github.com/jacknel/digital-wine-cellar-heroku#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
