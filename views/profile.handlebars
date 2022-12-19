@@ -1,0 +1,94 @@
+
+  <div class="uk-padding-small">
+    <h2>Grape! You're logged in, {{name}}!</h2>
+  </div>
+
+<div class="uk-grid">
+  <div class="">
+    <h3 class="uk-padding-small">Enter a New Bottle:</h3>
+
+    <form class="form new-project-form uk-form-horizontal">
+      <div class="uk-padding-small">
+        <label for="project-name" class="uk-form-label">Name of Wine:</label>
+        <input
+          class="form-input uk-form-controls"
+          type="text"
+          id="project-name"
+          name="project-name"
+        />
+      </div>
+      <div class="uk-padding-small">
+        <label for="project-maker" class="uk-form-label">Maker:</label>
+        <input
+          class="form-input uk-form-controls"
+          type="text"
+          id="project-maker"
+          name="project-maker"
+        />
+      </div>
+      <div class="uk-padding-small">
+        <label for="project-grape" class="uk-form-label">Grape:</label>
+        <input
+          class="form-input uk-form-controls"
+          type="text"
+          id="project-grape"
+          name="project-grape"
+        />
+      </div>
+      <div class="uk-padding-small">
+        <label for="project-vintage" class="uk-form-label">Vintage Date:</label>
+        <input
+          class="form-input uk-form-controls"
+          type="text"
+          id="project-vintage"
+          name="project-vintage"
+        />
+      </div>
+      <div class="uk-padding-small">
+        <label for="project-abv" class="uk-form-label">ABV:</label>
+        <input
+          class="form-input uk-form-controls"
+          type="text"
+          id="project-abv"
+          name="project-abv"
+        />
+      </div>
+      <div class="uk-padding-small">
+        <label for="project-rating" class="uk-form-label">Would You Purchase Again?:</label>
+        <input
+          class="form-input uk-form-controls"
+          type="text"
+          id="project-rating"
+          name="project-rating"
+        />
+      </div>
+      
+      <div class="uk-padding-small">
+        <label for="project-rating" class="uk-form-label"></label>
+        <button type="submit" class="btn uk-button">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if projects.length}}
+    <div class="project-list">
+      <h3>Your Wine Cellar:</h3>
+
+      {{#each projects as |project|}}
+        <div class="uk-grid">
+          <div class="">
+            <h4><a href="/projects/{{project.id}}">{{project.name}}</a></h4>
+          </div>
+          <div class="">
+            <button
+              class="btn"
+              data-id="{{project.id}}"
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
